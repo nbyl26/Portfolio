@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio Nabil Pasha</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f8f9fa;
+            color: #333;
+        }
+        header {
+            background: #007bff;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+        nav a {
+            margin: 0 15px;
+            color: white;
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        nav a:hover {
+            color: #ffd700;
+        }
+        .container {
+            margin-top: 30px;
+        }
+        .project-card {
+            transition: transform 0.2s;
+            cursor: pointer;
+        }
+        .project-card:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+        }
+        .footer {
+            background: #343a40;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+        }
+        .modal-header {
+            background-color: #007bff;
+            color: white;
+        }
+        @media (max-width: 576px) {
+            .project-card {
+                margin-bottom: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Nabil Pasha</h1>
+        <nav>
+            <a href="#about">About Me</a>
+            <a href="#projects">Projects</a>
+            <a href="#skills">Skills</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <section id="about">
+            <h2>About Me</h2>
+            <p>I am a third-semester Informatics student at Sriwijaya University with a primary interest in web development. I have experience in building interactive and responsive web applications.</p>
+        </section>
+
+        <section id="projects">
+            <h2>Projects</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card project-card" data-toggle="modal" data-target="#kodpiModal">
+                        <img src="Assets/img/kodpi.png" class="card-img-top" alt="KODPI">
+                        <div class="card-body">
+                            <h5 class="card-title">KODPI</h5>
+                            <p class="card-text">Coffee ordering website with various interesting features.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card project-card" data-toggle="modal" data-target="#barkasLayoModal">
+                        <img src="Assets/img/barkas-layo.png" class="card-img-top" alt="BarKas-Layo">
+                        <div class="card-body">
+                            <h5 class="card-title">BarKas-Layo</h5>
+                            <p class="card-text">Buy and sell second-hand goods website in Indralaya.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card project-card" data-toggle="modal" data-target="#typingSpeedTestModal">
+                        <img src="Assets/img/typing-speed-test.png" class="card-img-top" alt="Typing Speed Test">
+                        <div class="card-body">
+                            <h5 class="card-title">Typing Speed Test</h5>
+                            <p class="card-text">Typing game to test your typing speed.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="skills">
+            <h2>Skills</h2>
+            <ul>
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>JavaScript</li>
+                <li>Web Development</li>
+                <!-- Add more skills as needed -->
+            </ul>
+        </section>
+
+        <section id="contact">
+            <h2>Contact</h2>
+            <form>
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" id="message" rows="3" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-primary">Send</button>
+            </form>
+            <p>Email: <a href="mailto:nabilpasha230606@gmail.com">nabilpasha230606@gmail.com</a></p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/nabilpasha">LinkedIn</a></p>
+            <p>GitHub: <a href="https://github.com/nbyl26">GitHub</a></p>
+            <p>Instagram: <a href="https://www.instagram.com/nbyl.26">Instagram</a></p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Nabil Pasha. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Modal for KODPI Project -->
+    <div class="modal fade" id="kodpiModal" tabindex="-1" role="dialog" aria-labelledby="kodpiModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="kodpiModalLabel">KODPI</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="Assets/img/kodpi.png" class="img-fluid" alt="KODPI">
+                    <p>A coffee ordering website that allows users to choose various types of coffee, add them to the cart, and place orders online. Other features include user reviews and secure payment systems.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for BarKas-Layo Project -->
+    <div class="modal fade" id="barkasLayoModal" tabindex="-1" role="dialog" aria-labelledby="barkasLayoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="barkasLayoModalLabel">BarKas-Layo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="Assets/img/barkas-layo.png" class="img-fluid" alt="BarKas-Layo">
+                    <p>A second-hand goods buying and selling platform that allows users to sell and buy items easily. Features include user chat and rating systems.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal for Typing Speed Test Project -->
+    <div class="modal fade" id="typingSpeedTestModal" tabindex="-1" role="dialog" aria-labelledby="typingSpeedTestModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="typingSpeedTestModalLabel">Typing Speed Test</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <img src="Assets/img/typing-speed-test.png" class="img-fluid" alt="Typing Speed Test">
+                    <p>A typing game that tests users' typing speed and accuracy. Users can see their results and rankings.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
