@@ -8,88 +8,154 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
     <style>
+        /* Global Settings */
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f0f4f8;
-            color: #333;
+            background-color: #1b1b1e; /* Dark background */
+            color: #e0e0e3; /* Light text */
+            margin: 0;
+            padding: 0;
         }
+        a, a:hover {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* Header */
         header {
-            background: linear-gradient(to right, #007bff, #0056b3);
-            color: white;
-            padding: 30px 0;
+            background: #1f1f23;
+            color: #ffd700; /* Soft gold color */
+            padding: 20px;
             text-align: center;
             position: sticky;
             top: 0;
             z-index: 1000;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
         }
         nav a {
             margin: 0 15px;
-            color: white;
-            text-decoration: none;
-            transition: color 0.3s;
             font-weight: 600;
+            color: #e0e0e3;
+            transition: color 0.3s;
         }
         nav a:hover {
-            color: #ffd700;
+            color: #00ffc6; /* Light cyan */
         }
+
+        /* Sections */
         .container {
-            margin-top: 50px;
+            padding: 60px 20px;
+            max-width: 1200px;
+            margin: auto;
+        }
+        h2 {
+            font-size: 2.5em;
+            color: #ffd700;
+            text-align: center;
+            margin-bottom: 40px;
         }
         section {
             padding: 60px 0;
-            border-bottom: 1px solid #eaeaea;
+            position: relative;
+            border-bottom: 1px solid #2a2a2d;
         }
-        h2 {
-            margin-bottom: 40px;
-            font-size: 2.5em;
-            text-align: center;
-            color: #0056b3;
-        }
+        
+        /* Card Style */
         .project-card {
-            transition: transform 0.2s, box-shadow 0.2s;
+            transition: transform 0.3s, box-shadow 0.3s;
             cursor: pointer;
+            background-color: #2a2a2d;
+            color: #fff;
             border-radius: 10px;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
             overflow: hidden;
+            padding: 20px;
+            text-align: center;
         }
         .project-card:hover {
-            transform: scale(1.05);
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+            transform: translateY(-10px);
+            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8);
         }
+        .project-card img {
+            border-radius: 8px;
+            margin-bottom: 15px;
+        }
+
+        /* Skill Icons */
+        .skill-list {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            list-style: none;
+            padding: 0;
+            color: #00ffc6;
+        }
+        .skill-list li {
+            font-size: 1.2em;
+            padding: 8px 16px;
+            border-radius: 8px;
+            background-color: #2e2e33;
+            display: inline-flex;
+            align-items: center;
+            transition: background 0.3s;
+        }
+        .skill-list li:hover {
+            background-color: #3a3a40;
+        }
+
+        /* Education Section */
+        .education-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 30px;
+        }
+        .education-logo {
+            width: 80px;
+            height: auto;
+            margin-right: 20px;
+            filter: brightness(80%);
+        }
+        .education-info h5 {
+            color: #ffd700;
+            font-size: 1.3em;
+        }
+        .education-info p {
+            font-size: 1em;
+            color: #e0e0e3;
+        }
+
+        /* Footer */
         .footer {
-            background: #343a40;
-            color: white;
+            background: #2e2e33;
+            color: #fff;
             padding: 30px 0;
             text-align: center;
         }
+        .footer a {
+            color: #00ffc6;
+            transition: color 0.3s;
+        }
+        .footer a:hover {
+            color: #ffd700;
+        }
+
+        /* Back-to-top Button */
         .back-to-top {
             position: fixed;
             bottom: 20px;
             right: 20px;
             display: none;
+            background: #00ffc6;
+            color: #1b1b1e;
+            font-size: 1.5em;
+            border-radius: 50%;
+            padding: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            transition: all 0.3s;
         }
-        .modal-header {
-            background-color: #007bff;
-            color: white;
-        }
-        .modal-content {
-            border-radius: 10px;
-        }
-        .modal-body {
-            padding: 20px;
-        }
-        .skill-list {
-            list-style-type: none;
-            padding: 0;
-        }
-        .skill-list li {
-            margin-bottom: 10px;
-            display: flex;
-            align-items: center;
-        }
-        .skill-list i {
-            color: #007bff;
-            margin-right: 10px;
+        .back-to-top:hover {
+            background: #ffd700;
         }
     </style>
 </head>
@@ -100,47 +166,39 @@
             <a href="#about">About Me</a>
             <a href="#projects">Projects</a>
             <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
             <a href="#contact">Contact</a>
-            <a href="#blog">Blog</a>
-            <a href="#testimonials">Testimonials</a>
         </nav>
     </header>
 
     <div class="container">
         <section id="about">
             <h2>About Me</h2>
-            <p>I am a third-semester Informatics student at Sriwijaya University with a primary interest in web development. I have experience in building interactive and responsive web applications.</p>
-            <p>My journey in coding started with simple HTML and CSS, and now I am diving into JavaScript and frameworks like React to enhance my skills. I am passionate about creating seamless user experiences and exploring new technologies.</p>
+            <p>I am a third-semester Informatics student at Sriwijaya University, with a strong interest in web development and experience in building interactive web applications. I am passionate about creating seamless user experiences and exploring new technologies.</p>
         </section>
 
         <section id="projects">
             <h2>Projects</h2>
             <div class="row">
                 <div class="col-md-4">
-                    <div class="card project-card" data-toggle="modal" data-target="#kodpiModal">
+                    <div class="project-card">
                         <img src="Assets/img/kodpi.png" class="card-img-top" alt="KODPI">
-                        <div class="card-body">
-                            <h5 class="card-title">KODPI</h5>
-                            <p class="card-text">Coffee ordering website with various interesting features.</p>
-                        </div>
+                        <h5 class="card-title">KODPI</h5>
+                        <p class="card-text">A coffee ordering website with various interesting features.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card project-card" data-toggle="modal" data-target="#barkasLayoModal">
+                    <div class="project-card">
                         <img src="Assets/img/barkas-layo.png" class="card-img-top" alt="BarKas-Layo">
-                        <div class="card-body">
-                            <h5 class="card-title">BarKas-Layo</h5>
-                            <p class="card-text">Buy and sell second-hand goods website in Indralaya.</p>
-                        </div>
+                        <h5 class="card-title">BarKas-Layo</h5>
+                        <p class="card-text">A buy and sell second-hand goods website in Indralaya.</p>
                     </div>
                 </div>
                 <div class="col-md-4">
-                    <div class="card project-card" data-toggle="modal" data-target="#typingSpeedTestModal">
+                    <div class="project-card">
                         <img src="Assets/img/typing-speed-test.png" class="card-img-top" alt="Typing Speed Test">
-                        <div class="card-body">
-                            <h5 class="card-title">Typing Speed Test</h5>
-                            <p class="card-text">Typing game to test your typing speed.</p>
-                        </div>
+                        <h5 class="card-title">Typing Speed Test</h5>
+                        <p class="card-text">Typing game to test your typing speed.</p>
                     </div>
                 </div>
             </div>
@@ -158,30 +216,22 @@
             </ul>
         </section>
 
-        <section id="testimonials">
-            <h2>Testimonials</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <blockquote class="blockquote">
-                        <p class="mb-0">Nabil's work on the KODPI project was impressive and showcased his skills effectively.</p>
-                        <footer class="blockquote-footer">Professor ABC</footer>
-                    </blockquote>
-                </div>
-                <div class="col-md-4">
-                    <blockquote class="blockquote">
-                        <p class="mb-0">He has a strong grasp of web development and consistently delivers quality results.</p>
-                        <footer class="blockquote-footer">Classmate XYZ</footer>
-                    </blockquote>
+        <section id="education">
+            <h2>Education</h2>
+            <div class="education-item">
+                <img src="Assets/img/unsri.png" alt="Universitas Sriwijaya Logo" class="education-logo">
+                <div class="education-info">
+                    <h5>Universitas Sriwijaya</h5>
+                    <p>Teknik Informatika, 2023 - Present</p>
                 </div>
             </div>
-        </section>
-
-        <section id="blog">
-            <h2>Blog</h2>
-            <article>
-                <h3>How I Built the KODPI Project</h3>
-                <p>A brief description of the KODPI project, the technologies used, and the challenges faced during development...</p>
-            </article>
+            <div class="education-item">
+                <img src="Assets/img/smanti.png" alt="SMA Negeri 3 Prabumulih Logo" class="education-logo">
+                <div class="education-info">
+                    <h5>SMA Negeri 3 Prabumulih</h5>
+                    <p>Science Major, 2020 - 2023</p>
+                </div>
+            </div>
         </section>
     </div>
 
@@ -189,109 +239,4 @@
         <p>Connect with me on <a href="https://github.com/nbyl26">GitHub</a> | <a href="https://www.linkedin.com/in/nabilpasha">LinkedIn</a></p>
     </footer>
 
-    <!-- Project Modals -->
-    <div class="modal fade" id="kodpiModal" tabindex="-1" role="dialog" aria-labelledby="kodpiModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="kodpiModalLabel">KODPI</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>KODPI is a coffee ordering website that allows users to browse through a variety of coffee products, place orders, and manage their accounts.</p>
-                    <h6>Features:</h6>
-                    <ul>
-                        <li>User Registration and Login</li>
-                        <li>Product Catalog with Filtering Options</li>
-                        <li>Shopping Cart Functionality</li>
-                        <li>Responsive Design</li>
-                    </ul>
-                    <h6>Technologies Used:</h6>
-                    <p>HTML, CSS, JavaScript, Bootstrap</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="barkasLayoModal" tabindex="-1" role="dialog" aria-labelledby="barkasLayoModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="barkasLayoModalLabel">BarKas-Layo</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>BarKas-Layo is a platform for buying and selling second-hand goods. Users can list their items, browse available products, and connect with sellers.</p>
-                    <h6>Features:</h6>
-                    <ul>
-                        <li>Item Listing and Browsing</li>
-                        <li>Search Functionality</li>
-                        <li>User Messaging System</li>
-                        <li>Responsive Design</li>
-                    </ul>
-                    <h6>Technologies Used:</h6>
-                    <p>HTML, CSS, JavaScript, Bootstrap</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade" id="typingSpeedTestModal" tabindex="-1" role="dialog" aria-labelledby="typingSpeedTestModalLabel" aria-hidden="true">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="typingSpeedTestModalLabel">Typing Speed Test</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div class="modal-body">
-                    <p>This typing speed test game helps users improve their typing skills by challenging them to type a given text as quickly and accurately as possible.</p>
-                    <h6>Features:</h6>
-                    <ul>
-                        <li>Real-time Speed Calculation</li>
-                        <li>Text Suggestions</li>
-                        <li>Score Tracking</li>
-                    </ul>
-                    <h6>Technologies Used:</h6>
-                    <p>HTML, CSS, JavaScript</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <a href="#" class="btn btn-secondary back-to-top" style="display:none;">↑ Back to Top</a>
-
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script>
-        // Show back-to-top button
-        $(window).scroll(function() {
-            if ($(this).scrollTop() > 200) {
-                $('.back-to-top').fadeIn();
-            } else {
-                $('.back-to-top').fadeOut();
-            }
-        });
-
-        // Smooth scrolling
-        $("a").on('click', function(event) {
-            if (this.hash !== "") {
-                event.preventDefault();
-                const hash = this.hash;
-
-                $('html, body').animate({
-                    scrollTop: $(hash).offset().top
-                }, 800, function(){
-                    window.location.hash = hash;
-                });
-            }
-        });
-    </script>
-</body>
-</html>
+   
