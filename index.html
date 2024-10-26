@@ -1,242 +1,355 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Portfolio Nabil Pasha</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap"
+      rel="stylesheet"
+    />
     <style>
-        /* Global Settings */
-        body {
-            font-family: 'Poppins', sans-serif;
-            background-color: #1b1b1e; /* Dark background */
-            color: #e0e0e3; /* Light text */
-            margin: 0;
-            padding: 0;
-        }
-        a, a:hover {
-            text-decoration: none;
-            color: inherit;
-        }
+      /* Global Settings */
+      body {
+        font-family: "Poppins", sans-serif;
+        background-color: #1b1b1e; /* Dark background */
+        color: #e0e0e3; /* Light text */
+        margin: 0;
+        padding: 0;
+      }
+      a,
+      a:hover {
+        text-decoration: none;
+        color: inherit;
+      }
 
-        /* Header */
-        header {
-            background: #1f1f23;
-            color: #ffd700; /* Soft gold color */
-            padding: 20px;
-            text-align: center;
-            position: sticky;
-            top: 0;
-            z-index: 1000;
-            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
-        }
-        nav a {
-            margin: 0 15px;
-            font-weight: 600;
-            color: #e0e0e3;
-            transition: color 0.3s;
-        }
-        nav a:hover {
-            color: #00ffc6; /* Light cyan */
-        }
+      /* Header */
+      header {
+        background: #1f1f23;
+        color: #ffd700; /* Soft gold color */
+        padding: 20px;
+        text-align: center;
+        position: sticky;
+        top: 0;
+        z-index: 1000;
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      }
+      nav a {
+        margin: 0 15px;
+        font-weight: 600;
+        color: #e0e0e3;
+        transition: color 0.3s;
+      }
+      nav a:hover {
+        color: #00ffc6; /* Light cyan */
+      }
 
-        /* Sections */
-        .container {
-            padding: 60px 20px;
-            max-width: 1200px;
-            margin: auto;
-        }
-        h2 {
-            font-size: 2.5em;
-            color: #ffd700;
-            text-align: center;
-            margin-bottom: 40px;
-        }
-        section {
-            padding: 60px 0;
-            position: relative;
-            border-bottom: 1px solid #2a2a2d;
-        }
-        
-        /* Card Style */
-        .project-card {
-            transition: transform 0.3s, box-shadow 0.3s;
-            cursor: pointer;
-            background-color: #2a2a2d;
-            color: #fff;
-            border-radius: 10px;
-            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5);
-            overflow: hidden;
-            padding: 20px;
-            text-align: center;
-        }
-        .project-card:hover {
-            transform: translateY(-10px);
-            box-shadow: 0 8px 40px rgba(0, 0, 0, 0.8);
-        }
-        .project-card img {
-            border-radius: 8px;
-            margin-bottom: 15px;
-        }
+      /* Sections */
+      .container {
+        padding: 60px 20px;
+        max-width: 1200px;
+        margin: auto;
+      }
+      h2 {
+        font-size: 2.5em;
+        color: #ffd700;
+        text-align: center;
+        margin-bottom: 40px;
+      }
+      section {
+        padding: 60px 0;
+        position: relative;
+        border-bottom: 1px solid #2a2a2d;
+      }
 
-        /* Skill Icons */
-        .skill-list {
-            display: flex;
-            justify-content: center;
-            flex-wrap: wrap;
-            gap: 15px;
-            list-style: none;
-            padding: 0;
-            color: #00ffc6;
-        }
-        .skill-list li {
-            font-size: 1.2em;
-            padding: 8px 16px;
-            border-radius: 8px;
-            background-color: #2e2e33;
-            display: inline-flex;
-            align-items: center;
-            transition: background 0.3s;
-        }
-        .skill-list li:hover {
-            background-color: #3a3a40;
-        }
+      /* Project Section Styling */
+      #projects .row {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+      }
+      .project-card {
+        transition: transform 0.3s ease, box-shadow 0.3s ease,
+          background-color 0.3s;
+        cursor: pointer;
+        background-color: #292929;
+        color: #fff;
+        border-radius: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.6);
+        overflow: hidden;
+        padding: 25px;
+        text-align: center;
+        width: 280px;
+      }
+      .project-card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.8);
+        background-color: #383838;
+      }
+      .project-card img {
+        width: 100%;
+        height: 160px;
+        object-fit: cover;
+        border-radius: 10px;
+        transition: transform 0.3s;
+      }
+      .project-card img:hover {
+        transform: scale(1.1);
+      }
+      .project-card h5 {
+        font-size: 1.5em;
+        margin-top: 15px;
+        color: #ffd700; /* Gold color for project title */
+      }
+      .project-card p {
+        font-size: 1em;
+        color: #e0e0e3;
+        line-height: 1.5;
+      }
 
-        /* Education Section */
-        .education-item {
-            display: flex;
-            align-items: center;
-            margin-bottom: 30px;
-        }
-        .education-logo {
-            width: 80px;
-            height: auto;
-            margin-right: 20px;
-            filter: brightness(80%);
-        }
-        .education-info h5 {
-            color: #ffd700;
-            font-size: 1.3em;
-        }
-        .education-info p {
-            font-size: 1em;
-            color: #e0e0e3;
-        }
+      /* Additional Styling for Overall Aesthetic */
+      .container h2 {
+        font-size: 2.5em;
+        color: #ffd700;
+        text-align: center;
+        margin-bottom: 40px;
+        position: relative;
+        display: inline-block;
+      }
+      .container h2::after {
+        content: "";
+        width: 80px;
+        height: 4px;
+        background: #00ffc6;
+        display: block;
+        margin: 8px auto 0;
+        border-radius: 4px;
+      }
 
-        /* Footer */
-        .footer {
-            background: #2e2e33;
-            color: #fff;
-            padding: 30px 0;
-            text-align: center;
-        }
-        .footer a {
-            color: #00ffc6;
-            transition: color 0.3s;
-        }
-        .footer a:hover {
-            color: #ffd700;
-        }
+      /* Skill Icons */
+      .skill-list {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 15px;
+        list-style: none;
+        padding: 0;
+        color: #00ffc6;
+      }
+      .skill-list li {
+        font-size: 1.2em;
+        padding: 8px 16px;
+        border-radius: 8px;
+        background-color: #2e2e33;
+        display: inline-flex;
+        align-items: center;
+        transition: background 0.3s;
+      }
+      .skill-list li:hover {
+        background-color: #3a3a40;
+      }
 
-        /* Back-to-top Button */
-        .back-to-top {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            display: none;
-            background: #00ffc6;
-            color: #1b1b1e;
-            font-size: 1.5em;
-            border-radius: 50%;
-            padding: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
-            transition: all 0.3s;
-        }
-        .back-to-top:hover {
-            background: #ffd700;
-        }
+      /* Education Section */
+      .education-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 30px;
+      }
+      .education-logo {
+        width: 80px;
+        height: auto;
+        margin-right: 20px;
+        filter: brightness(80%);
+      }
+      .education-info h5 {
+        color: #ffd700;
+        font-size: 1.3em;
+      }
+      .education-info p {
+        font-size: 1em;
+        color: #e0e0e3;
+      }
+
+      /* Footer */
+      .footer {
+        background: #2e2e33;
+        color: #fff;
+        padding: 30px 0;
+        text-align: center;
+      }
+      .footer a {
+        color: #00ffc6;
+        transition: color 0.3s;
+      }
+      .footer a:hover {
+        color: #ffd700;
+      }
+
+      /* Back-to-top Button */
+      .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        display: none;
+        background: #00ffc6;
+        color: #1b1b1e;
+        font-size: 1.5em;
+        border-radius: 50%;
+        padding: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        transition: all 0.3s;
+      }
+      .back-to-top:hover {
+        background: #ffd700;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <header>
-        <h1>Nabil Pasha</h1>
-        <nav>
-            <a href="#about">About Me</a>
-            <a href="#projects">Projects</a>
-            <a href="#skills">Skills</a>
-            <a href="#education">Education</a>
-            <a href="#contact">Contact</a>
-        </nav>
+      <h1>Nabil Pasha</h1>
+      <nav>
+        <a href="#about">About Me</a>
+        <a href="#projects">Projects</a>
+        <a href="#skills">Skills</a>
+        <a href="#education">Education</a>
+        <a href="#contact">Contact</a>
+      </nav>
     </header>
 
     <div class="container">
-        <section id="about">
-            <h2>About Me</h2>
-            <p>I am a third-semester Informatics student at Sriwijaya University, with a strong interest in web development and experience in building interactive web applications. I am passionate about creating seamless user experiences and exploring new technologies.</p>
-        </section>
+      <section id="about">
+        <h2>About Me</h2>
+        <p>
+          I am a third-semester Informatics student at Sriwijaya University,
+          with a strong interest in web development and experience in building
+          interactive web applications. I am passionate about creating seamless
+          user experiences and exploring new technologies.
+        </p>
+      </section>
 
-        <section id="projects">
-            <h2>Projects</h2>
-            <div class="row">
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <img src="Assets/img/kodpi.png" class="card-img-top" alt="KODPI">
-                        <h5 class="card-title">KODPI</h5>
-                        <p class="card-text">A coffee ordering website with various interesting features.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <img src="Assets/img/barkas-layo.png" class="card-img-top" alt="BarKas-Layo">
-                        <h5 class="card-title">BarKas-Layo</h5>
-                        <p class="card-text">A buy and sell second-hand goods website in Indralaya.</p>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="project-card">
-                        <img src="Assets/img/typing-speed-test.png" class="card-img-top" alt="Typing Speed Test">
-                        <h5 class="card-title">Typing Speed Test</h5>
-                        <p class="card-text">Typing game to test your typing speed.</p>
-                    </div>
-                </div>
+      <section id="projects">
+        <h2>Projects</h2>
+        <div class="row">
+          <div class="col-md-4">
+            <div class="project-card">
+              <img
+                src="Assets/img/kodpi.png"
+                class="card-img-top"
+                alt="KODPI"
+              />
+              <h5 class="card-title">KODPI</h5>
+              <p class="card-text">
+                A coffee ordering website with various interesting features.
+              </p>
             </div>
-        </section>
+          </div>
+          <div class="col-md-4">
+            <div class="project-card">
+              <img
+                src="Assets/img/barkas-layo.png"
+                class="card-img-top"
+                alt="BarKas-Layo"
+              />
+              <h5 class="card-title">BarKas-Layo</h5>
+              <p class="card-text">
+                A buy and sell second-hand goods website in Indralaya.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="project-card">
+              <img
+                src="Assets/img/typing-speed-test.png"
+                class="card-img-top"
+                alt="Typing Speed Test"
+              />
+              <h5 class="card-title">Typing Speed Test</h5>
+              <p class="card-text">Typing game to test your typing speed.</p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="project-card">
+              <img
+                src="Assets/img/pong-game.png"
+                class="card-img-top"
+                alt="Pong Game"
+              />
+              <h5 class="card-title">Pong Game</h5>
+              <p class="card-text">
+                A retro arcade game where players score by hitting a ball past the opponent's paddle.
+              </p>
+            </div>
+          </div>
+          <div class="col-md-4">
+            <div class="project-card">
+              <img
+                src="Assets/img/chat-app.png"
+                class="card-img-top"
+                alt="Chat App"
+              />
+              <h5 class="card-title">Chat App</h5>
+              <p class="card-text">
+                A real-time chat application built with Node.js, offering users
+                a smooth and responsive messaging experience.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul class="skill-list">
-                <li><i class="fas fa-code"></i> HTML</li>
-                <li><i class="fas fa-paint-brush"></i> CSS</li>
-                <li><i class="fas fa-laptop-code"></i> JavaScript</li>
-                <li><i class="fas fa-globe"></i> Web Development</li>
-                <li><i class="fas fa-react"></i> React</li>
-                <li><i class="fas fa-database"></i> MySQL</li>
-            </ul>
-        </section>
+      <section id="skills">
+        <h2>Skills</h2>
+        <ul class="skill-list">
+          <li><i class="fas fa-code"></i> HTML</li>
+          <li><i class="fas fa-paint-brush"></i> CSS</li>
+          <li><i class="fas fa-laptop-code"></i> JavaScript</li>
+          <li><i class="fas fa-globe"></i> Web Development</li>
+          <li><i class="fas fa-react"></i> React</li>
+          <li><i class="fas fa-database"></i> MySQL</li>
+        </ul>
+      </section>
 
-        <section id="education">
-            <h2>Education</h2>
-            <div class="education-item">
-                <img src="Assets/img/unsri.png" alt="Universitas Sriwijaya Logo" class="education-logo">
-                <div class="education-info">
-                    <h5>Universitas Sriwijaya</h5>
-                    <p>Teknik Informatika, 2023 - Present</p>
-                </div>
-            </div>
-            <div class="education-item">
-                <img src="Assets/img/smanti.png" alt="SMA Negeri 3 Prabumulih Logo" class="education-logo">
-                <div class="education-info">
-                    <h5>SMA Negeri 3 Prabumulih</h5>
-                    <p>Science Major, 2020 - 2023</p>
-                </div>
-            </div>
-        </section>
+      <section id="education">
+        <h2>Education</h2>
+        <div class="education-item">
+          <img
+            src="Assets/img/unsri.png"
+            alt="Universitas Sriwijaya Logo"
+            class="education-logo"
+          />
+          <div class="education-info">
+            <h5>Universitas Sriwijaya</h5>
+            <p>Teknik Informatika, 2023 - Present</p>
+          </div>
+        </div>
+        <div class="education-item">
+          <img
+            src="Assets/img/smanti.png"
+            alt="SMA Negeri 3 Prabumulih Logo"
+            class="education-logo"
+          />
+          <div class="education-info">
+            <h5>SMA Negeri 3 Prabumulih</h5>
+            <p>Science Major, 2020 - 2023</p>
+          </div>
+        </div>
+      </section>
     </div>
 
     <footer class="footer">
-        <p>Connect with me on <a href="https://github.com/nbyl26">GitHub</a> | <a href="https://www.linkedin.com/in/nabilpasha">LinkedIn</a></p>
+      <p>
+        Connect with me on <a href="https://github.com/nbyl26">GitHub</a> |
+        <a href="https://www.linkedin.com/in/nabilpasha">LinkedIn</a>
+      </p>
     </footer>
-
-   
+  </body>
+</html>
