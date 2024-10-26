@@ -179,6 +179,42 @@
         color: #e0e0e3;
       }
 
+      /* Education Status Styles */
+      .status {
+        display: inline-block;
+        font-weight: 600;
+        padding: 5px 12px;
+        border-radius: 12px;
+        margin-top: 8px;
+        font-size: 1em;
+        color: #ffffff;
+        transition: background-color 0.3s, transform 0.3s;
+        text-align: center;
+      }
+
+      .ongoing {
+        background-color: #28a745; /* Bright green for ongoing */
+        box-shadow: 0 4px 10px rgba(0, 255, 144, 0.6);
+        animation: glowing 1.5s infinite alternate;
+      }
+
+      .graduated {
+        background-color: #ff6347; /* Bright red for graduated */
+        box-shadow: 0 4px 10px rgba(255, 99, 71, 0.6);
+        animation: glowing 1.5s infinite alternate;
+      }
+
+      @keyframes glowing {
+        from {
+          transform: scale(1);
+          box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+        }
+        to {
+          transform: scale(1.05);
+          box-shadow: 0 8px 20px rgba(255, 255, 255, 0.7);
+        }
+      }
+
       /* Footer */
       .footer {
         background: #2e2e33;
@@ -285,7 +321,8 @@
               />
               <h5 class="card-title">Pong Game</h5>
               <p class="card-text">
-                A retro arcade game where players score by hitting a ball past the opponent's paddle.
+                A retro arcade game where players score by hitting a ball past
+                the opponent's paddle.
               </p>
             </div>
           </div>
@@ -329,6 +366,7 @@
           <div class="education-info">
             <h5>Universitas Sriwijaya</h5>
             <p>Teknik Informatika, 2023 - Present</p>
+            <span class="status ongoing">On Going</span>
           </div>
         </div>
         <div class="education-item">
@@ -340,6 +378,7 @@
           <div class="education-info">
             <h5>SMA Negeri 3 Prabumulih</h5>
             <p>Science Major, 2020 - 2023</p>
+            <span class="status graduated">Graduated</span>
           </div>
         </div>
       </section>
