@@ -10,13 +10,13 @@
     <style>
         body {
             font-family: 'Poppins', sans-serif;
-            background-color: #f8f9fa;
+            background-color: #f0f4f8;
             color: #333;
         }
         header {
             background: linear-gradient(to right, #007bff, #0056b3);
             color: white;
-            padding: 20px 0;
+            padding: 30px 0;
             text-align: center;
             position: sticky;
             top: 0;
@@ -27,34 +27,40 @@
             color: white;
             text-decoration: none;
             transition: color 0.3s;
+            font-weight: 600;
         }
         nav a:hover {
             color: #ffd700;
         }
         .container {
-            margin-top: 30px;
+            margin-top: 50px;
+        }
+        section {
+            padding: 60px 0;
+            border-bottom: 1px solid #eaeaea;
+        }
+        h2 {
+            margin-bottom: 40px;
+            font-size: 2.5em;
+            text-align: center;
+            color: #0056b3;
         }
         .project-card {
-            transition: transform 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s;
             cursor: pointer;
             border-radius: 10px;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
         }
         .project-card:hover {
             transform: scale(1.05);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
         }
         .footer {
             background: #343a40;
             color: white;
-            padding: 10px 0;
+            padding: 30px 0;
             text-align: center;
-            position: relative;
-            bottom: 0;
-            width: 100%;
-        }
-        .modal-header {
-            background-color: #007bff;
-            color: white;
         }
         .back-to-top {
             position: fixed;
@@ -62,10 +68,28 @@
             right: 20px;
             display: none;
         }
-        @media (max-width: 576px) {
-            .project-card {
-                margin-bottom: 20px;
-            }
+        .modal-header {
+            background-color: #007bff;
+            color: white;
+        }
+        .modal-content {
+            border-radius: 10px;
+        }
+        .modal-body {
+            padding: 20px;
+        }
+        .skill-list {
+            list-style-type: none;
+            padding: 0;
+        }
+        .skill-list li {
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+        }
+        .skill-list i {
+            color: #007bff;
+            margin-right: 10px;
         }
     </style>
 </head>
@@ -86,6 +110,7 @@
         <section id="about">
             <h2>About Me</h2>
             <p>I am a third-semester Informatics student at Sriwijaya University with a primary interest in web development. I have experience in building interactive and responsive web applications.</p>
+            <p>My journey in coding started with simple HTML and CSS, and now I am diving into JavaScript and frameworks like React to enhance my skills. I am passionate about creating seamless user experiences and exploring new technologies.</p>
         </section>
 
         <section id="projects">
@@ -123,11 +148,13 @@
 
         <section id="skills">
             <h2>Skills</h2>
-            <ul>
+            <ul class="skill-list">
                 <li><i class="fas fa-code"></i> HTML</li>
                 <li><i class="fas fa-paint-brush"></i> CSS</li>
                 <li><i class="fas fa-laptop-code"></i> JavaScript</li>
                 <li><i class="fas fa-globe"></i> Web Development</li>
+                <li><i class="fas fa-react"></i> React</li>
+                <li><i class="fas fa-database"></i> MySQL</li>
             </ul>
         </section>
 
@@ -161,6 +188,81 @@
     <footer class="footer">
         <p>Connect with me on <a href="https://github.com/nbyl26">GitHub</a> | <a href="https://www.linkedin.com/in/nabilpasha">LinkedIn</a></p>
     </footer>
+
+    <!-- Project Modals -->
+    <div class="modal fade" id="kodpiModal" tabindex="-1" role="dialog" aria-labelledby="kodpiModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="kodpiModalLabel">KODPI</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>KODPI is a coffee ordering website that allows users to browse through a variety of coffee products, place orders, and manage their accounts.</p>
+                    <h6>Features:</h6>
+                    <ul>
+                        <li>User Registration and Login</li>
+                        <li>Product Catalog with Filtering Options</li>
+                        <li>Shopping Cart Functionality</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                    <h6>Technologies Used:</h6>
+                    <p>HTML, CSS, JavaScript, Bootstrap</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="barkasLayoModal" tabindex="-1" role="dialog" aria-labelledby="barkasLayoModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="barkasLayoModalLabel">BarKas-Layo</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>BarKas-Layo is a platform for buying and selling second-hand goods. Users can list their items, browse available products, and connect with sellers.</p>
+                    <h6>Features:</h6>
+                    <ul>
+                        <li>Item Listing and Browsing</li>
+                        <li>Search Functionality</li>
+                        <li>User Messaging System</li>
+                        <li>Responsive Design</li>
+                    </ul>
+                    <h6>Technologies Used:</h6>
+                    <p>HTML, CSS, JavaScript, Bootstrap</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="typingSpeedTestModal" tabindex="-1" role="dialog" aria-labelledby="typingSpeedTestModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="typingSpeedTestModalLabel">Typing Speed Test</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <p>This typing speed test game helps users improve their typing skills by challenging them to type a given text as quickly and accurately as possible.</p>
+                    <h6>Features:</h6>
+                    <ul>
+                        <li>Real-time Speed Calculation</li>
+                        <li>Text Suggestions</li>
+                        <li>Score Tracking</li>
+                    </ul>
+                    <h6>Technologies Used:</h6>
+                    <p>HTML, CSS, JavaScript</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
     <a href="#" class="btn btn-secondary back-to-top" style="display:none;">↑ Back to Top</a>
 
