@@ -158,60 +158,82 @@
         background-color: #3a3a40;
       }
 
-      /* Education Section */
+      /* Education Container Layout */
+      .education-container {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr); /* Layout 2 kolom */
+        gap: 30px;
+        align-items: start;
+        padding: 20px;
+      }
+
+      /* Education Item Styling */
       .education-item {
         display: flex;
         align-items: center;
-        margin-bottom: 30px;
-      }
-      .education-logo {
-        width: 80px;
-        height: auto;
-        margin-right: 20px;
-        filter: brightness(80%);
-      }
-      .education-info h5 {
-        color: #ffd700;
-        font-size: 1.3em;
-      }
-      .education-info p {
-        font-size: 1em;
-        color: #e0e0e3;
+        background: rgba(255, 255, 255, 0.05);
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s ease;
       }
 
-      /* Education Status Styles */
+      .education-item:hover {
+        transform: scale(1.03);
+      }
+
+      .education-logo {
+        width: 70px;
+        height: auto;
+        margin-right: 15px;
+        filter: brightness(85%);
+      }
+
+      .education-info h5 {
+        color: #ffd700;
+        font-size: 1.2em;
+        margin: 0;
+        font-weight: 600;
+      }
+
+      .education-info p {
+        font-size: 0.9em;
+        color: #cfcfcf;
+        margin: 4px 0 0 0;
+      }
+
+      /* Status Badge Styling */
       .status {
         display: inline-block;
-        font-weight: 600;
-        padding: 5px 12px;
-        border-radius: 12px;
-        margin-top: 8px;
-        font-size: 1em;
+        padding: 6px 14px;
+        border-radius: 8px;
+        font-size: 0.85em;
+        font-weight: 500;
+        margin-top: 10px;
         color: #ffffff;
-        transition: background-color 0.3s, transform 0.3s;
+        background-color: rgba(255, 255, 255, 0.15);
         text-align: center;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+        transition: background-color 0.3s ease;
       }
 
       .ongoing {
-        background-color: #28a745; /* Bright green for ongoing */
-        box-shadow: 0 4px 10px rgba(0, 255, 144, 0.6);
-        animation: glowing 1.5s infinite alternate;
+        background-color: #4a90e2; /* Biru lembut untuk ongoing */
+        color: #ffffff;
       }
 
       .graduated {
-        background-color: #ff6347; /* Bright red for graduated */
-        box-shadow: 0 4px 10px rgba(255, 99, 71, 0.6);
-        animation: glowing 1.5s infinite alternate;
+        background-color: #a1c45a; /* Hijau lembut untuk graduated */
+        color: #ffffff;
       }
 
+      /* Animation Glow */
       @keyframes glowing {
-        from {
-          transform: scale(1);
-          box-shadow: 0 4px 10px rgba(255, 255, 255, 0.5);
+        0% {
+          box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
         }
-        to {
-          transform: scale(1.05);
-          box-shadow: 0 8px 20px rgba(255, 255, 255, 0.7);
+        100% {
+          box-shadow: 0 0 16px rgba(255, 255, 255, 0.7);
         }
       }
 
