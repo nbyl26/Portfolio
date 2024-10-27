@@ -246,8 +246,7 @@
       }
 
       .ongoing {
-          background-color: #4a90e2;
-          /* Light blue for ongoing */
+        background-color: #4a90e2;
       }
 
       .graduated {
