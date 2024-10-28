@@ -154,6 +154,11 @@
           transition: background 0.3s;
       }
 
+      .skill-list img{
+            height: 21px;
+            color: #00ffc6;
+      }
+
       .skill-list li:hover {
           background-color: #3a3a40;
       }
@@ -251,10 +256,8 @@
 
       .graduated {
           background-color: #a1c45a;
-          /* Light green for graduated */
       }
 
-      /* Hover Animation for Status Badge */
       .status:hover {
           animation: glow 1.5s infinite alternate;
       }
